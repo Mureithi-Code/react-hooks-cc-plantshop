@@ -54,7 +54,14 @@
       "image": "./images/aloe.jpg",
       "price": 0.12,
       "id": 8,
-      "inStock": false
+      "inStock": true
+    },
+    {
+      "name": "Abc",
+      "image": "./images/zz-plant.jpg",
+      "price": 50,
+      "id": 9,
+      "inStock": true
     }
   ]
 }
