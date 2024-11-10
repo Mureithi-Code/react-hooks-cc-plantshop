@@ -37,7 +37,7 @@ function App() {
     })
     .catch((error) => {
       console.error("Error adding new plant:", error);
-      setPlants((prevPlants) => prevPlants);
+      setPlants((prevPlants) => prevPlants.filter((plant) => plant.id !== newPlant.id));
     });
   };
 
@@ -47,8 +47,6 @@ function App() {
   );
 
   setPlants(updatedPlants);
-  
-  //const updatedPlant = updatedPlants.find((plant) => plant.id === plantId);
 
   fetch(`http://localhost:6001/plants/${plantId}`, {
     method: 'PATCH',
@@ -59,7 +57,10 @@ function App() {
   })
   .then(r => r.json())
   .then((updatedPlantFromServer) => {
-    
+    setPlants((prevPlants) =>
+    prevPlants.map((plant) =>
+    plant.id === updatedPlantFromServer.id ? updatedPlantFromServer : plant
+  ));
   })
   .catch((error) => {
     console.error("Error updating plant stock:", error);

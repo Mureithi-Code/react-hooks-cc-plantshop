@@ -48,26 +48,6 @@
       "image": "./images/fiddle-leaf-fig.jpg",
       "price": 55,
       "inStock": true
-    },
-    {
-      "name": "Jose",
-      "image": "./images/aloe.jpg",
-      "price": 0.12,
-      "id": 8,
-      "inStock": true
-    },
-    {
-      "name": "Abc",
-      "image": "./images/zz-plant.jpg",
-      "price": 50,
-      "id": 9,
-      "inStock": true
-    },
-    {
-      "name": "Kim Sao",
-      "image": "./images/zz-plant.jpg",
-      "price": 100,
-      "id": 10
     }
   ]
 }

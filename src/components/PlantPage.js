@@ -6,8 +6,8 @@ import Search from "./Search";
 function PlantPage({plants, onAddPlant, onUpdateStock, searchTerm, setSearchTerm}) {
   return (
     <main>
-      <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       <NewPlantForm onAddPlant={onAddPlant} />
+      <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       <PlantList plants={plants} onUpdateStock={onUpdateStock} />
     </main>
   );
