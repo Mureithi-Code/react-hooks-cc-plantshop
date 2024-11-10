@@ -62,6 +62,12 @@
       "price": 50,
       "id": 9,
       "inStock": true
+    },
+    {
+      "name": "Kim Sao",
+      "image": "./images/zz-plant.jpg",
+      "price": 100,
+      "id": 10
     }
   ]
 }

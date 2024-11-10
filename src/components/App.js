@@ -12,7 +12,7 @@ function App() {
       return r.json();
     })
     .then(data => {
-      console.log(data);
+      
       setPlants(data)
     })
     .catch((error) => console.error("Error fetching plants:", error));
@@ -31,7 +31,6 @@ function App() {
     .then((r) => r.json())
     
     .then((newPlantFromServer) => {
-      
       setPlants((prevPlants) =>
         prevPlants.map((plant) =>
         plant.id === newPlantFromServer.id ? newPlantFromServer : plant));
@@ -49,7 +48,7 @@ function App() {
 
   setPlants(updatedPlants);
   
-  const updatedPlant = updatedPlants.find((plant) => plant.id === plantId);
+  //const updatedPlant = updatedPlants.find((plant) => plant.id === plantId);
 
   fetch(`http://localhost:6001/plants/${plantId}`, {
     method: 'PATCH',
